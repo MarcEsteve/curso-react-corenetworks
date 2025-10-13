@@ -2,13 +2,17 @@
 
 // import {¿qué recurso importo?} from '¿dónde lo importo?';
 
+// {llaves}
+// (parentesis)
+// [corchetes]
+
 // import { heroes } from '../data/heroes';
-// console.log( heroes );
+// console.log( heroes ); 
 
-// import heroes, { owners } from '../data/heroes';
-// console.log( owners );
+import heroes, { owners } from '../data/heroes';
+console.log( owners );
 
-import heroes from "../data/heroes"; 
+// import heroes from "../data/heroes"; 
 
 // https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/find
 
@@ -23,7 +27,7 @@ import heroes from "../data/heroes";
 //   });
 // }
 
-// console.log( getHeroeById(2) );
+// console.log( getHeroeById(2) ); // { id: 2, name: 'Spiderman', owner: 'Marvel' }
 
 export const getHeroeById = (id) => heroes.find((heroe) => heroe.id === id);
 
@@ -32,12 +36,17 @@ console.log( getHeroeById(2) );
 //filter()
 const frutas = ["plátano", "kiwi"];
 const result = frutas.filter((textoFruta) => textoFruta.length > 6);
-console.log(result);
-// Expected output: Array ["exuberant", "destruction", "present"]
+console.log(result); 
+// Expected output: Array ["plátano"]
 
 // find? solo devuelve 1, filter todos
 // https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+
 const getHeroesByOwner = (propietario) =>
   heroes.filter((heroe) => heroe.owner === propietario);
 
-console.log( getHeroesByOwner('Marvel') );
+console.log( getHeroesByOwner('Marvel') ); 
+// [{ id: 2, name: 'Spiderman', owner: 'Marvel' }, { id: 5, name: 'Wolverine', owner: 'Marvel' }]
+
+const heroesMarvel = getHeroesByOwner('Marvel');
+console.log( heroesMarvel.length ); // 2

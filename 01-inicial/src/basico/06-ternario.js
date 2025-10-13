@@ -11,4 +11,4 @@ if ( !activo ) {
 // const mensaje = ( activo ) ? 'Activo' : null;
 const mensaje = activo && "Activo";
 
-console.log(mensaje);
+console.log(mensaje); // 'Activo'

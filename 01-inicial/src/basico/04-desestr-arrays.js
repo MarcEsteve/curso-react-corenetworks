@@ -10,7 +10,7 @@ console.log(personajes[1]); // Miles Morales
 console.log(personajes[2]); // Gwen Stacy
 
 // Queremos el tercer personaje
-const [personaje1 ] = personajes;
+const [personaje1 ] = personajes; //personajes[0]
 const [ , personaje2 ] = personajes;
 const [ , , personaje3 ] = personajes;
 console.log(personaje3); // Gwen Stacy
@@ -21,7 +21,7 @@ const retornaSpideyInfo = () => {
 }
 
 // Desestructuración del array retornado
-const [ alias, añoAparicion ] = retornaSpideyInfo();
+const [ alias, anyAparicion ] = retornaSpideyInfo();
 console.log(alias, anyAparicion); // Spidey 2002
 
 
@@ -40,7 +40,7 @@ arr[0]; // Peter Parker
 arr[1](); // Lanzando telaraña desde Peter Parker
 
 // Desestructuración del array retornado
-// const [ spiderNombre, lanzarTelaraña ] = useSpiderState('Peter Parker');
+const [ spiderNombre, lanzarTelaraña ] = useSpiderState('Peter Parker');
 
-// console.log(spiderNombre);       // Peter Parker
-// lanzarTelaraña();                // Lanzando telaraña desde Peter Parker
+console.log(spiderNombre);       // Peter Parker
+lanzarTelaraña();                // Lanzando telaraña desde Peter Parker

@@ -5,10 +5,14 @@ function sumar( a, b ) {
     return a + b;
 }
 
+//let resultadoSuma = sumar(2,3); // 5
+
 // Función de flecha
 const saludar1 = ( nombre ) => {
     return `Hola, ${ nombre }`;
 }
+
+//saludar1('Marc');
 
 // Función de flecha simplificada
 const saludar2 = ( nombre, apellido ) => `Hola, ${nombre} ${apellido }`;
@@ -21,8 +25,8 @@ const saludar3 = () => `Hola Mundo`;
 
 // console.log( saludar('Marc') )
 
-console.log( saludar2("Pedro","Jiménez") );
-console.log( saludar3("Andreu") );
+console.log( saludar2("Pedro","Jiménez") ); // Hola, Pedro Jiménez
+console.log( saludar3("Andreu") ); // Hola Mundo
 
 // Función que retorna un objeto
 const getUser = () => ({
@@ -32,8 +36,8 @@ const getUser = () => ({
 
 // console.log(getUser());
 
-const user = getUser();
-console.log(user);
+const user = getUser(); // { uid: '01234', username: 'marceg' }
+console.log(user); 
 
 // Tarea: transformar esta función a una función de flecha
 // y que retorne un objeto implícitamente:
