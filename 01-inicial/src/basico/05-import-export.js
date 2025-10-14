@@ -10,7 +10,7 @@
 // console.log( heroes ); 
 
 import heroes, { owners } from '../data/heroes';
-console.log( owners );
+// console.log( owners );
 
 // import heroes from "../data/heroes"; 
 
@@ -31,12 +31,12 @@ console.log( owners );
 
 export const getHeroeById = (id) => heroes.find((heroe) => heroe.id === id);
 
-console.log( getHeroeById(2) );
+// console.log( getHeroeById(2) );
 
 //filter()
 const frutas = ["plátano", "kiwi"];
 const result = frutas.filter((textoFruta) => textoFruta.length > 6);
-console.log(result); 
+// console.log(result); 
 // Expected output: Array ["plátano"]
 
 // find? solo devuelve 1, filter todos
@@ -45,8 +45,8 @@ console.log(result);
 const getHeroesByOwner = (propietario) =>
   heroes.filter((heroe) => heroe.owner === propietario);
 
-console.log( getHeroesByOwner('Marvel') ); 
+// console.log( getHeroesByOwner('Marvel') ); 
 // [{ id: 2, name: 'Spiderman', owner: 'Marvel' }, { id: 5, name: 'Wolverine', owner: 'Marvel' }]
 
 const heroesMarvel = getHeroesByOwner('Marvel');
-console.log( heroesMarvel.length ); // 2
+// console.log( heroesMarvel.length ); // 2
