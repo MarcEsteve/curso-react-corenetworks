@@ -3,7 +3,7 @@
 
 //Create account > Create an API Key
 
-const apiKey = "D9n0H1elB7UefwYGtEfLMTmI2p2Tk2xf"; // Reemplaza con tu propia API key de Giphy
+const apiKey = "QePFYqshr0FZmRQXiU0lzknZkm22pqyn"; // Reemplaza con tu propia API key de Giphy
 
 // Docs > GIPHY API > GIF & Sticker Endpoints > Random Endpoint
 //API Explorer > Random Endpoint
@@ -14,16 +14,17 @@ const peticion = fetch(`http://api.giphy.com/v1/gifs/random?api_key=${apiKey}`);
 
 //Ejemplo básico de uso de fetch con promesas
 
-// peticion.then( resp => console.log(resp))
-// .catch (console.warn);
+// peticion
+//   .then((resp) => console.log(resp))
+//   .catch(console.warn);
 
-// peticion.then ( resp => {
-//   resp.json().then( data => {
-//     console.log(data);
+// peticion
+//   .then((resp) => {
+//     resp.json().then((data) => {
+//       console.log(data);
+//     });
 //   })
-// })
-// .catch (console.warn);
-
+//   .catch(console.warn);
 
 //Promesas en cadena
 peticion
@@ -38,4 +39,5 @@ peticion
     document.body.append(img);
   })
   .catch(console.warn);
+
 // Nota: En un entorno de producción, es recomendable manejar los errores de manera más robusta y no exponer la API key directamente en el código fuente.
