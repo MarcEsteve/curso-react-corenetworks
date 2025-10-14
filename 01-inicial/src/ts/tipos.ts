@@ -69,7 +69,7 @@ function multiplicacion(operando1: number, operando2: number, mensaje?: string):
 }
 
 const resultado1 = multiplicacion(10, 5);
-const resultado2 = multiplicacion(2, 4, 'Solución: ');
+const resultado2 = multiplicacion(2, 4, 'Solución: '); // Solución: 8
 
 // Tipos genéricos (definen en tiempo de invocación)
 
