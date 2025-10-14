@@ -10,17 +10,17 @@ import { getHeroeById } from "./05-import-export";
 // - resolve: se llama cuando la operación asíncrona se completa con éxito
 // - reject: se llama cuando la operación asíncrona falla
 
-const promesa = new Promise((resolve, reject) => {
+// const promesa = new Promise((resolve, reject) => {
 
-  setTimeout(() => {
-    resolve();
-  },1000)
+//   setTimeout(() => {
+//     resolve();
+//   },1000)
 
-});
+// });
 
-promesa.then( () => {
-  console.log("Se ejecutó la promesa");
-});
+// promesa.then( () => {
+//   console.log("Se ejecutó la promesa");
+// });
 
 // // Ejemplo de una promesa que se resuelve o se rechaza después de 2 segundos
 // const exito = false; // ✅ Pon esto en true o false para probar resolve o reject
@@ -41,40 +41,43 @@ promesa.then( () => {
 //   })
 //   .catch((err) => {
 //     console.error("❌ La promesa fue rechazada con error:", err);
+//   })
+//   .finally(() => {
+//     console.log("La promesa terminó (resuelta o rechazada)");
 //   });
 
-// console.log("⏳ Operación en curso...");
-
+// console.log("⏳ Operación en curso...(esto es en promesas)");
 
 // Las promesas por naturaleza son asíncronas, por lo que se ejecutan en segundo plano y no bloquean el hilo principal de ejecución.
 
-// const promesa = new Promise( (resolve, reject) => {
+console.log("Inicio de la búsqueda de héroe...");
 
-//     setTimeout( () =>  {
-//         const p1 = getHeroeById(2);
-//         resolve( p1 );
-//         // reject( 'No se pudo encontrar el héroe' );
-//     }, 2000 )
-
+// const promesa = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     const p1 = getHeroeById(2);
+//     resolve(p1);
+//     // reject( 'No se pudo encontrar el héroe' );
+//   }, 2000);
 // });
 
-// promesa.then( (heroe) => {
-//     console.log('heroe', heroe)
-// })
-// .catch( err => console.warn( err ) );
+// promesa
+//   .then((heroe) => {
+//     console.log("heroe", heroe);
+//   })
+//   .catch((err) => console.warn(err));
 
+const getHeroeByIdAsync = (id) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const p1 = getHeroeById(id);
+      if (p1) {
+        resolve(p1);
+      } else {
+        reject("No se pudo encontrar el héroe");
+      }
+    }, 2000);
+  });
+};
 
-// const getHeroeByIdAsync = (id) => {
-//   return new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//       const p1 = getHeroeById(id);
-//       if (p1) {
-//         resolve(p1);
-//       } else {
-//         reject("No se pudo encontrar el héroe");
-//       }
-//     }, 2000);
-//   });
-// };
-
-// getHeroeByIdAsync(1).then(console.log).catch(console.warn);
+getHeroeByIdAsync(1).then(console.log).catch(console.warn);
+getHeroeByIdAsync(6).then(console.log).catch(console.warn); // No existe el héroe con id 6

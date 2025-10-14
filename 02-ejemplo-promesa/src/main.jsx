@@ -22,7 +22,7 @@ obtenerEstadoTrafico()
     console.log("✅ Resultado recibido:", resultado);
   })
   .catch((error) => {
-    console.error("⚠️ Se ha producido un error al obtener el tráfico:");
+    console.warn("⚠️ Se ha producido un error al obtener el tráfico:");
     console.error(error);
   })
   .finally(() => {

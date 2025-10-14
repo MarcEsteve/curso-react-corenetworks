@@ -3,11 +3,20 @@
 // import './basico/03-desestr-obj';
 // import './basico/04-desestr-arrays';
 // import './basico/05-import-export';
-// import './basico/07-consoles';    
-// import './basico/08-promesas';
+// import './basico/07-consoles';
+import "./basico/08-promesas";
 // import './basico/09-fetch';
 
-console.log("Hola mundo");
-// Si editas, guardas y recargas, verás el cambio en la consola 
-// Gracias al Live Reload Server de Vite se hace automáticamente
+// Metodos para temporizadores en JavaScript asincronos
 
+// setTimeout(() => {
+//   console.log("Esta instrucción se ejecuta después de 5 segundos");
+// }, 3000);
+
+// setInterval(() => {
+//   console.log("Esta instrucción se ejecuta cada 5 segundos");
+// }, 5000);
+
+console.log("Código en main.jsx");
+// Si editas, guardas y recargas, verás el cambio en la consola
+// Gracias al Live Reload Server de Vite se hace automáticamente
