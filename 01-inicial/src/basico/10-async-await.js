@@ -6,10 +6,11 @@
 //await se utiliza para esperar a que una promesa se resuelva o se rechace, lo que permite manejar el resultado de la promesa de manera más directa y legible.
 const getImagen = async () => {
   try {
-    const apiKey = "C1khQe3Z7R1W2lfTO9myKeuShdqFYSGC";
+    const apiKey = "QePFYqshr0FZmRQXiU0lzknZkm22pqyn";
     const resp = await fetch(
       `http://api.giphy.com/v1/gifs/random?api_key=${apiKey}`
     );
+    // console.log(resp);
     const { data } = await resp.json();
 
     const { url } = data.images.original;
@@ -25,3 +26,4 @@ const getImagen = async () => {
 };
 
 getImagen();
+console.log("Antes de la imagen");

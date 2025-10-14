@@ -5,7 +5,9 @@
 // import './basico/05-import-export';
 // import './basico/07-consoles';
 // import "./basico/08-promesas";
-import './basico/09-fetch';
+// import './basico/09-fetch';
+// import './basico/10-async-await';
+import './ts/ejemplo';
 
 // Metodos para temporizadores en JavaScript asincronos
 
