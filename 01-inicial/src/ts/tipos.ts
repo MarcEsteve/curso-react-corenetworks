@@ -89,7 +89,27 @@ referencia = '0000234';
 // referencia = false;
 
 // Tipos de unión compleja (valores que podrán tener las variables con ese tipo)
-
+// En JavaScript no existen los tipos unión, se implementan con validaciones en tiempo de ejecución
 type razasPerroAceptadas = 'Pastor Alemán' | 'Pastor Belga' | 'Mastín';
 
+
 let toby: razasPerroAceptadas = 'Mastín';
+// toby = 'Chihuahua'; // Error
+
+// Enumerados (enum) se usan para definir conjuntos de valores constantes
+// En JavaScript no existen los enumerados, se implementan como objetos
+enum RazasPerro {
+    PastorAleman = 'Pastor Alemán',
+    PastorBelga = 'Pastor Belga',
+    Mastin = 'Mastín'
+}
+
+let rex: RazasPerro = RazasPerro.PastorAleman;
+// rex = 'Chihuahua'; // Error
+
+// Diferencias entre tipos e interfaces
+// - Los tipos son más versátiles (uniones, primitivos, genéricos, tuplas, etc)
+// - Las interfaces son más rígidas pero permiten definir implementaciones obligatorias para clases
+// - Una interfaz puede extender otra interfaz (herencia múltiple)
+// - Un tipo no puede extender otro tipo pero puede componerse de otros tipos (uniones)
+// - Una clase puede implementar múltiples interfaces pero sólo extender una clase

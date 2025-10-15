@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Bloques de código con botón copiar</title>
+    <style>
+      .code-wrap {
+        position: relative;
+        background: #0f172a; /* slate-900 */
+        color: #e5e7eb; /* gray-200 */
+        border-radius: 12px;
+        overflow: auto;
+        margin: 1rem 0;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+      }
+      .code-wrap pre {
+        margin: 0;
+        padding: 1rem 3.5rem 1rem 1rem;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas,
+          "Liberation Mono", monospace;
+        font-size: 0.95rem;
+        line-height: 1.5;
+      }
+      .copy-btn {
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        border: 1px solid #334155;
+        background: #111827;
+        color: #e5e7eb;
+        padding: 0.35rem 0.6rem;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 0.85rem;
+        transition: 0.15s ease-in-out;
+      }
+      .copy-btn:hover {
+        background: #1f2937;
+      }
+      .copy-btn.copied {
+        background: #059669;
+        border-color: #059669;
+      } /* feedback verde */
+      .label {
+        display: block;
+        font-size: 0.75rem;
+        color: #94a3b8;
+        padding: 0.5rem 1rem 0;
+      }
+      code .prompt {
+        color: #60a5fa;
+      } /* $ o PS> */
+      code .cmd {
+        color: #e5e7eb;
+      }
+      code .comment {
+        color: #9ca3af;
+      }
+    </style>
+  </head>
+  <body>
+    <span class="label">Comprobar versión de npm</span>
+    <div class="code-wrap" data-code>
+      <button class="copy-btn" style="position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        border: 1px solid #334155;
+        background: #111827;
+        color: #e5e7eb;
+        padding: 0.35rem 0.6rem;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 0.85rem;
+        transition: 0.15s ease-in-out;" aria-label="Copiar bloque">Copiar</button>
+      <pre><code>
+<span class="prompt">$</span> <span>npm -v</span>
+<span class="comment"># Devuelve la versión instalada de npm</span>
+    </code></pre>
+    </div>
+
+        <span class="label">Comprobar versión de node</span>
+    <div class="code-wrap" data-code>
+      <button class="copy-btn" style="position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        border: 1px solid #334155;
+        background: #111827;
+        color: #e5e7eb;
+        padding: 0.35rem 0.6rem;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 0.85rem;
+        transition: 0.15s ease-in-out;" aria-label="Copiar bloque">Copiar</button>
+      <pre><code>
+<span class="prompt">$</span> <span>node -v</span>
+<span class="comment"># Devuelve la versión instalada de Node.js</span>
+    </code></pre>
+    </div>
+
+            <span class="label">Comprobar versión de TypeScript</span>
+    <div class="code-wrap" data-code>
+      <button class="copy-btn" style="position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        border: 1px solid #334155;
+        background: #111827;
+        color: #e5e7eb;
+        padding: 0.35rem 0.6rem;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 0.85rem;
+        transition: 0.15s ease-in-out;" aria-label="Copiar bloque">Copiar</button>
+      <pre><code>
+<span class="prompt">$</span> <span>tsc -v</span>
+<span class="comment"># Devuelve la versión instalada de TypeScript</span>
+    </code></pre>
+    </div>
+
+    <script>
+      // Copiar el texto tal cual aparece (sin etiquetas) de cada bloque <code>
+      document.querySelectorAll("[data-code]").forEach((block) => {
+        const btn = block.querySelector(".copy-btn");
+        const code = block.querySelector("code");
+
+        btn.addEventListener("click", async () => {
+          const text = code.innerText.replace(/^\n+|\n+$/g, ""); // limpia saltos de línea al inicio/fin
+          try {
+            await navigator.clipboard.writeText(text);
+            btn.textContent = "¡Copiado!";
+            btn.classList.add("copied");
+            setTimeout(() => {
+              btn.textContent = "Copiar";
+              btn.classList.remove("copied");
+            }, 1600);
+          } catch (err) {
+            // Fallback: selección manual si Clipboard API falla
+            const range = document.createRange();
+            range.selectNodeContents(code);
+            const sel = window.getSelection();
+            sel.removeAllRanges();
+            sel.addRange(range);
+            const ok = document.execCommand("copy");
+            sel.removeAllRanges();
+            btn.textContent = ok ? "¡Copiado!" : "Seleccionado";
+            setTimeout(() => {
+              btn.textContent = "Copiar";
+            }, 1600);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

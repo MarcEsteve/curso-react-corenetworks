@@ -1,16 +1,19 @@
 // Clases en TypeScript
 
 class Jugador {
+    //Atributos (propiedades)
     public nombre: string; // public no es obligatorio porque es el modificador por defecto
     apellidos: string; // es public también
     private goles: number;
 
-    constructor(nombre: string, apellidos: string) {
-        this.nombre = nombre;
-        this.apellidos = apellidos;
+    constructor(name: string, surname: string) {
+        this.nombre = name;
+        this.apellidos = surname;
         this.goles = 0;
     }
 
+    // Métodos (funciones)
+    // setters y getters de las propiedades privadas
     setGoles(goles: number): void {
         this.goles = goles;
     }
@@ -21,6 +24,11 @@ class Jugador {
 }
 
 let jugador1 = new Jugador('Lionel','Messi');
+jugador1.setGoles(5);
+console.log(jugador1.getGoles()); // 5
+console.log(jugador1.nombre); // Lionel
+console.log(jugador1.apellidos); // Messi
+// console.log(jugador1.goles); // Error, la propiedad es privada
 
 // Clases con constructor breve (si declaramos los parámetros del constructor con
 // modificador de acceso se crean las propiedades con el mismo nombre)
@@ -34,7 +42,7 @@ class Player {
     // setter y getters...
 }
 
-let jugador2 = new Player('Lionel','Messi', 0);
+let jugador2 = new Player('Lamin','Fernández', 0);
 
 // Interfaces (como tipado estructural)
 
@@ -49,7 +57,7 @@ let estadoBotonEnvio: EstadoBoton = {
     hidden: false,
     disabled: true,
     waiting: false,
-    //backgroundColor: 'green' Al ser opcional si no se incluye no arroja error
+    // backgroundColor: 'green' //Al ser opcional si no se incluye no arroja error
 }
 
 // Interfaces como implementaciones obligatorias para clases
