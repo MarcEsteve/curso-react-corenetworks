@@ -9,3 +9,5 @@ export default defineConfig({
 //Indicamos que utilizamos React
 
 //Antes SWC se compilaba con Babel, actualmente Vite usa SWC directamente para compilar el código de React, lo que mejora el rendimiento y reduce el tiempo de construcción.
+
+//SWC es Speedy Web Compiler, una herramienta de compilación rápida escrita en Rust que se utiliza para transformar y optimizar el código JavaScript y TypeScript.
