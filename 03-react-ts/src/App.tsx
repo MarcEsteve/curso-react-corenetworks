@@ -1,5 +1,7 @@
 // import React from "react";
 import "./App.css";
+import Card from "./components/Card";
+import Restriccion from "./components/Restriccion";
 import Saludo from "./components/Saludo";
 import Titulo from "./components/Titulo";
 import Footer from "./shared/Footer";
@@ -17,7 +19,13 @@ function App() {
         <Saludo nombre="Gabriel" />
         <Saludo nombre="Cristina" />
         <Saludo nombre="Rut" />
+
+        <Card titulo="Primero" contenido="Este es mi primer componente Card." />
+        <Card titulo="Segundo" contenido="Los componentes pueden repetirse." />
+        <Card titulo="Tercero" contenido="Y cada uno tiene props distintas." />
       </main>
+      <h2>Simulación de restricción DGT (useState)</h2>
+      <Restriccion />
       <Footer />
     </>
   );
