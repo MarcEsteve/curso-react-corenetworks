@@ -3,6 +3,7 @@ import "./App.css";
 import AlertasDGT from "./components/Alertas/AlertasDGT";
 import BotonDGT from "./components/Boton/BotonDGT";
 import Card from "./components/Card";
+import InfoConductor from "./components/InfoConductor";
 import Restriccion from "./components/Restriccion";
 import Saludo from "./components/Saludo";
 import Titulo from "./components/Titulo";
@@ -34,10 +35,14 @@ function App() {
 
       <AlertasDGT />
 
-      <h2>🚦 Ejemplo con CSS Modules</h2>
+      <h2 id="ejemplo-css-modules">🚦 Ejemplo con CSS Modules</h2>
       <p>El botón cambia de color según el estado del tráfico:</p>
 
       <BotonDGT />
+
+      {/* <h2>🚗 Información del conductor (useState)</h2>
+      <InfoConductor /> */}
+
       <Footer />
     </>
   );
