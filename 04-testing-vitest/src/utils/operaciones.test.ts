@@ -1,6 +1,7 @@
 import { describe, it, expect } from "vitest";
 import { sumar, restar, multiplicar, dividir } from "./operaciones";
 
+// Suite de tests, agrupación de tests
 describe("Operaciones aritméticas", () => {
   // AAA: Arrange | Act | Assert
 
