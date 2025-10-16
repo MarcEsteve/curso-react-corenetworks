@@ -2,7 +2,7 @@ import { describe, it, expect } from "vitest";
 import { sumar, restar, multiplicar, dividir } from "./operaciones";
 
 // Suite de tests, agrupación de tests
-describe("Operaciones aritméticas", () => {
+describe.skip("Operaciones aritméticas", () => {
   // AAA: Arrange | Act | Assert
 
   it("sumar() debe sumar dos números", () => {

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1760605190350" clover="3.2.0">
-  <project timestamp="1760605190350" name="All files">
-    <metrics statements="44" coveredstatements="15" conditionals="7" coveredconditionals="5" methods="6" coveredmethods="4" elements="57" coveredelements="24" complexity="0" loc="44" ncloc="44" packages="2" files="3" classes="3"/>
+<coverage generated="1760609932477" clover="3.2.0">
+  <project timestamp="1760609932477" name="All files">
+    <metrics statements="80" coveredstatements="16" conditionals="5" coveredconditionals="2" methods="10" coveredmethods="2" elements="95" coveredelements="20" complexity="0" loc="80" ncloc="80" packages="3" files="7" classes="7"/>
     <package name="src">
       <metrics statements="29" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
       <file name="App.tsx" path="C:\Users\artha\OneDrive\Escritorio\CORENETWORKS\curso-react-corenetworks\04-testing-vitest\src\App.tsx">
@@ -40,25 +40,76 @@
         <line num="8" count="0" type="stmt"/>
       </file>
     </package>
-    <package name="src.utils">
-      <metrics statements="15" coveredstatements="15" conditionals="5" coveredconditionals="5" methods="4" coveredmethods="4"/>
-      <file name="operaciones.ts" path="C:\Users\artha\OneDrive\Escritorio\CORENETWORKS\curso-react-corenetworks\04-testing-vitest\src\utils\operaciones.ts">
-        <metrics statements="15" coveredstatements="15" conditionals="5" coveredconditionals="5" methods="4" coveredmethods="4"/>
+    <package name="src.spies">
+      <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+      <file name="alertas.ts" path="C:\Users\artha\OneDrive\Escritorio\CORENETWORKS\curso-react-corenetworks\04-testing-vitest\src\spies\alertas.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="cond" truecount="1" falsecount="0"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
-        <line num="5" count="1" type="cond" truecount="1" falsecount="0"/>
+      </file>
+      <file name="controlVelocidad.ts" path="C:\Users\artha\OneDrive\Escritorio\CORENETWORKS\curso-react-corenetworks\04-testing-vitest\src\spies\controlVelocidad.ts">
+        <metrics statements="6" coveredstatements="6" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
         <line num="7" count="1" type="stmt"/>
-        <line num="9" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="10" count="1" type="stmt"/>
-        <line num="11" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.utils">
+      <metrics statements="42" coveredstatements="7" conditionals="1" coveredconditionals="0" methods="6" coveredmethods="0"/>
+      <file name="calcularMulta.tsx" path="C:\Users\artha\OneDrive\Escritorio\CORENETWORKS\curso-react-corenetworks\04-testing-vitest\src\utils\calcularMulta.tsx">
+        <metrics statements="23" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+      </file>
+      <file name="operaciones.ts" path="C:\Users\artha\OneDrive\Escritorio\CORENETWORKS\curso-react-corenetworks\04-testing-vitest\src\utils\operaciones.ts">
+        <metrics statements="15" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
         <line num="13" count="1" type="stmt"/>
         <line num="16" count="1" type="stmt"/>
-        <line num="17" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="18" count="2" type="cond" truecount="1" falsecount="0"/>
-        <line num="19" count="1" type="stmt"/>
-        <line num="20" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+      </file>
+      <file name="velocidad.ts" path="C:\Users\artha\OneDrive\Escritorio\CORENETWORKS\curso-react-corenetworks\04-testing-vitest\src\utils\velocidad.ts">
+        <metrics statements="4" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
       </file>
     </package>
   </project>
