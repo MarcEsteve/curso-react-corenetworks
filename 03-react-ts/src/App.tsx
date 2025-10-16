@@ -4,9 +4,11 @@ import AlertasDGT from "./components/Alertas/AlertasDGT";
 import BotonDGT from "./components/Boton/BotonDGT";
 import Card from "./components/Card";
 import InfoConductor from "./components/InfoConductor";
+import PanelDGT from "./components/PanelDGT";
 import Restriccion from "./components/Restriccion";
 import Saludo from "./components/Saludo";
 import Titulo from "./components/Titulo";
+import VehiculoCard from "./components/VehiculoCard";
 import Footer from "./shared/Footer";
 import Header from "./shared/Header";
 
@@ -40,8 +42,19 @@ function App() {
 
       <BotonDGT />
 
-      {/* <h2>🚗 Información del conductor (useState)</h2>
-      <InfoConductor /> */}
+      <h2>🚗 Información del conductor (useState)</h2>
+      <InfoConductor />
+
+       <PanelDGT titulo="Zona restringida por contaminación">
+        <VehiculoCard
+          matricula="5678-XYZ"
+          modelo="Renault Clio"
+          color="Rojo"
+          itv={true}
+        />
+        <p>🚫 Este vehículo no puede circular hoy por el centro urbano.</p>
+      </PanelDGT>
+
 
       <Footer />
     </>
