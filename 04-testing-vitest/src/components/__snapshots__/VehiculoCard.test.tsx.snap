@@ -1,0 +1,20 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`VehiculoCard > renderiza correctamente el componente (snapshot) 1`] = `
+<div>
+  <article>
+    <h3>
+      🚗 
+      Toyota
+    </h3>
+    <p>
+      Matrícula: 
+      1234ABC
+    </p>
+    <p>
+      ITV: 
+      Vigente ✅
+    </p>
+  </article>
+</div>
+`;
