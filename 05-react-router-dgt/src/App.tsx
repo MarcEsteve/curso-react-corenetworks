@@ -10,9 +10,8 @@ export default function App() {
     <Routes>
       <Route element={<Layout />}>
         <Route path="/" element={<Home />} />
-        <Route path="vehiculos" element={<Vehiculos />}>
-          <Route path=":matricula" element={<VehiculoDetalle />} />
-        </Route>
+        <Route path="vehiculos" element={<Vehiculos />} />
+        <Route path="vehiculos/:matricula" element={<VehiculoDetalle />} />
         <Route path="contacto" element={<Contacto />} />
         <Route path="*" element={<h1>404 - Matrícula no encontrada</h1>} />
       </Route>
