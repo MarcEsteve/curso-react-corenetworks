@@ -9,7 +9,10 @@ export default function Layout() {
       <nav style={{ display: "flex", gap: 12, marginBottom: 12 }}>
         <NavLink to="/" style={navStyle} end>Inicio</NavLink>
         <NavLink to="/vehiculos" style={navStyle}>Vehículos</NavLink>
+        <NavLink to="/contacto" style={navStyle}>Contacto</NavLink>
       </nav>
+
+      {/* <a href="#">Enlace externo</a> */}
 
       {/* Aquí se cargan las páginas hijas */}
       <Outlet />

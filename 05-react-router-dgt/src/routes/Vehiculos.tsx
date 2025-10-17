@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const data = ["1234ABC", "5678XYZ"];
+const data = ["1234ABC", "5678XYZ", "9012DEF"];
 
 export default function Vehiculos() {
   return (
