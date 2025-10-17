@@ -5,7 +5,7 @@ import VehiculoCard from "./VehiculoCard";
 describe("VehiculoCard", () => {
   it("renderiza correctamente el componente (snapshot)", () => {
     const { container } = render(
-      <VehiculoCard matricula="1234AB" modelo="Toyota" itv={true} />
+      <VehiculoCard matricula="1234ABC" modelo="Toyota" itv={true} />
     );
 
     expect(container).toMatchSnapshot();
