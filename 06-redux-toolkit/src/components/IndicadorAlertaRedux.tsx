@@ -1,11 +1,10 @@
 import { useAppSelector } from "../store/hooks";
 
 export default function IndicadorAlertaRedux() {
-  const { activas, totalToggles } = useAppSelector(s => s.alerta);
+  const { activas } = useAppSelector(s => s.alerta);
   return (
     <p>
-      {activas ? "🟢 Alertas activas" : "⚪ Alertas desactivadas"} ·
-      Cambios: {totalToggles}
+      {activas ? "🟢 Alertas activas" : "⚪ Alertas desactivadas"}
     </p>
   );
 }
