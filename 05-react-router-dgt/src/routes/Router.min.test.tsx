@@ -31,7 +31,7 @@ function VehiculosList() {
 function VehiculoDetalle() {
   const { matricula } = useParams();
   const v = DATA.find(x => x.matricula === matricula);
-  if (!v) return <h2>404 – Vehículo no encontrado</h2>;
+  if (!v) return <h2>404 - Vehículo no encontrado</h2>;
   return (
     <div>
       <h2>Detalle</h2>

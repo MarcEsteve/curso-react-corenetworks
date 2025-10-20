@@ -58,7 +58,7 @@ export const router = createBrowserRouter([
         path: "contacto",
         element: <Contacto />,
       },
-      { path: "*", element: <h1 style={{ padding: 24 }}>404 – No encontrado</h1> },
+      { path: "*", element: <h1 style={{ padding: 24 }}>404 - No encontrado</h1> },
     ],
   },
 ]);

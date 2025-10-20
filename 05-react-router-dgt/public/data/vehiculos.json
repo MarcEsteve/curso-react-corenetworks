@@ -22,5 +22,45 @@
     "color": "Azul",
     "seguroEnVigor": true,
     "fechaUltimaITV": "2025-02-18"
+  },
+  {
+    "matricula": "3456DEF",
+    "marca": "Ford",
+    "modelo": "Focus",
+    "color": "Blanco",
+    "seguroEnVigor": true,
+    "fechaUltimaITV": "2024-08-25"
+  },
+  {
+    "matricula": "7890GHI",
+    "marca": "Volkswagen",
+    "modelo": "Golf",
+    "color": "Negro",
+    "seguroEnVigor": false,
+    "fechaUltimaITV": "2023-12-15"
+  },
+  {
+    "matricula": "2345JKL",
+    "marca": "Hyundai",
+    "modelo": "i30",
+    "color": "Verde",
+    "seguroEnVigor": true,
+    "fechaUltimaITV": "2024-05-30"
+  },
+  {
+    "matricula": "6789MNO",
+    "marca": "Kia",
+    "modelo": "Ceed",
+    "color": "Amarillo",
+    "seguroEnVigor": true,
+    "fechaUltimaITV": "2024-09-12"
+  },
+  {
+    "matricula": "0123PQR",
+    "marca": "Peugeot",
+    "modelo": "208",
+    "color": "Naranja",
+    "seguroEnVigor": false,
+    "fechaUltimaITV": "2023-10-05"
   }
 ]
