@@ -2,11 +2,13 @@ import { Routes, Route, NavLink } from "react-router";
 import Home from "./routes/Home";
 import Login from "./routes/Login";
 import ProtectedRoute from "./auth/ProtectedRoute";
+import RoleRoute from "./auth/RoleRoute";
 
 import PanelLayout from "./routes/panel/PanelLayout";
 import PanelResumen from "./routes/panel/PanelResumen";
 import PanelVehiculos from "./routes/panel/PanelVehiculos";
 import PanelAjustes from "./routes/panel/PanelAjustes";
+import NoAcceso from "./routes/NoAcceso";
 
 const link = ({ isActive }: { isActive: boolean }) => ({
   textDecoration: isActive ? "underline" : "none",
@@ -26,7 +28,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
 
-        {/* Grupo protegido: Panel + rutas hijas */}
+        {/* Grupo protegido: Panel */}
         <Route
           path="/panel"
           element={
@@ -37,9 +39,19 @@ export default function App() {
         >
           <Route index element={<PanelResumen />} />
           <Route path="vehiculos" element={<PanelVehiculos />} />
-          <Route path="ajustes" element={<PanelAjustes />} />
+
+          {/* Ruta protegida por rol */}
+          <Route
+            path="ajustes"
+            element={
+              <RoleRoute allowedRole="admin">
+                <PanelAjustes />
+              </RoleRoute>
+            }
+          />
         </Route>
 
+        <Route path="/no-acceso" element={<NoAcceso />} />
         <Route path="*" element={<h1 style={{ padding: 16 }}>404</h1>} />
       </Routes>
     </>

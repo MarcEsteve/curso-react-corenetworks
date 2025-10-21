@@ -11,17 +11,35 @@ export default function PanelLayout() {
 
   return (
     <div style={{ padding: 16 }}>
-      <header style={{ display: "flex", justifyContent: "space-between", marginBottom: 12 }}>
+      <header
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          marginBottom: 12,
+          backgroundColor: "#f5f5f5",
+          padding: "8px 16px",
+          borderRadius: 8,
+        }}
+      >
         <nav>
           <NavLink to="/panel" style={link} end>Resumen</NavLink>
           <NavLink to="/panel/vehiculos" style={link}>Vehículos</NavLink>
           <NavLink to="/panel/ajustes" style={link}>Ajustes</NavLink>
         </nav>
+
         <div>
-          <span style={{ marginRight: 8 }}>👤 {user?.name} ({user?.role})</span>
-          <button onClick={logout}>Salir</button>
+          {user ? (
+            <>
+              <span style={{ marginRight: 8 }}>👋 Hola {user.name}</span>
+              <button onClick={logout}>Salir</button>
+            </>
+          ) : (
+            <span>Invitado</span>
+          )}
         </div>
       </header>
+
       <Outlet />
     </div>
   );
