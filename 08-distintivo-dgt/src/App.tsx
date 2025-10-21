@@ -10,6 +10,8 @@ const DATA: Registro[] = [
   { matricula: "0012KMT", codigo: "16TE" }, // → ECO
   { matricula: "0004DJP", codigo: "SIN DISTINTIVO" }, // → SIN
   { matricula: "9999XXX", codigo: "CERO" }, // → CERO (demo)
+  { matricula: "5334FBB", codigo: "16TC" },
+  { matricula: "CS4383AV", codigo: "SIN DISTINTIVO" }
 ];
 
 // Normaliza la matrícula: mayúsculas, sin espacios/guiones

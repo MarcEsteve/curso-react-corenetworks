@@ -24,12 +24,12 @@ export default function Login() {
       <h1>🔐 Login</h1>
       <form onSubmit={onSubmit} style={{ display: "grid", gap: 8, maxWidth: 320 }}>
         <input
-          placeholder="usuario (admin/marta/leo)"
+          placeholder="usuario (admin/marta/leo/marc)"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         />
         <input
-          placeholder="contraseña (admin123/marta2025/leo2025)"
+          placeholder="contraseña (admin123/marta2025/leo2025/12345)"
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}

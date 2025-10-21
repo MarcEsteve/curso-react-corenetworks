@@ -16,5 +16,11 @@
     "password": "leo2025",
     "name": "Leonardo Ruiz",
     "role": "user"
+  },
+  {
+    "username": "marc",
+    "password": "12345",
+    "name": "Marc Esteve",
+    "role": "admin"
   }
 ]
