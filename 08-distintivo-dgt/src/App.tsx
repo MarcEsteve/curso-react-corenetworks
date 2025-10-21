@@ -3,7 +3,7 @@ import "./styles/dgt.css";
 
 type Registro = { matricula: string; codigo: string };
 
-// ✅ Dataset mínimo (5 casos): B, C, ECO, CERO, SIN
+// ✅ Dataset mínimo: B, C, ECO, CERO, SIN
 const DATA: Registro[] = [
   { matricula: "0002BGP", codigo: "16TB" }, // → B
   { matricula: "0003HMC", codigo: "16TC" }, // → C
@@ -82,6 +82,7 @@ export default function App() {
       </header>
 
       <main className="dgt-main">
+        {/* Mejora: generar un componentes de <SearchForm className="tsx"></SearchForm> */}
         <form onSubmit={onSubmit} className="dgt-form">
           <input
             className="dgt-input"
@@ -94,6 +95,7 @@ export default function App() {
         </form>
 
         {/* 🔽 Resultado justo debajo del buscador */}
+        {/* Mejora: generar un componentes de <BadgeCard className="tsx"></BadgeCard> */}
         {encontrado && (
           <section className="dgt-card">
             <div className="dgt-plate">{encontrado.matricula}</div>
