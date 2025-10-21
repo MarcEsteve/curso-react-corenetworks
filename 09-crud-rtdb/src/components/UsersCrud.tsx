@@ -66,8 +66,9 @@ export default function UsersCrud() {
 
   return (
     <div style={{ maxWidth: 720, margin: "24px auto", padding: 16 }}>
+        {/* Componente Header */}
       <h1>👥 Usuarios (Firebase RTDB)</h1>
-
+        {/* Componente Formulario */}
       <form onSubmit={onSubmit} style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr auto", gap: 8, marginBottom: 16 }}>
         <input placeholder="Nombre" value={nombre} onChange={e => setNombre(e.target.value)} required />
         <input placeholder="Email" type="email" value={email} onChange={e => setEmail(e.target.value)} required />
@@ -83,6 +84,7 @@ export default function UsersCrud() {
 
       {!loading && users.length === 0 && <p>No hay usuarios.</p>}
 
+      {/* Componente Tabla */}
       {users.length > 0 && (
         <table style={{ width: "100%", borderCollapse: "collapse" }}>
           <thead>
