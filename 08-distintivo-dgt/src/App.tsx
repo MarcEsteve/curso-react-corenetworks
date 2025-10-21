@@ -14,6 +14,7 @@ const DATA: Registro[] = [
   { matricula: "CS4383AV", codigo: "SIN DISTINTIVO" }
 ];
 
+
 // Normaliza la matrícula: mayúsculas, sin espacios/guiones
 const normalizePlate = (s: string) => s.toUpperCase().replace(/[^A-Z0-9]/g, "");
 
