@@ -1,0 +1,28 @@
+{
+  "usuarios": [
+    {
+      "name": "Ada Admin",
+      "password": "admin123",
+      "role": "admin",
+      "username": "admin"
+    },
+    {
+      "name": "Marta García",
+      "password": "marta2025",
+      "role": "user",
+      "username": "marta"
+    },
+    {
+      "name": "Leonardo Ruiz",
+      "password": "leo2025",
+      "role": "user",
+      "username": "leo"
+    },
+    {
+      "name": "Marc Esteve",
+      "password": 12345,
+      "role": "admin",
+      "username": "marc"
+    }
+  ]
+}
