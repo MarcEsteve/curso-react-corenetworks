@@ -10,6 +10,7 @@ export default function FirestoreDemo() {
   const [usuarios, setUsuarios] = useState<any[]>([]);
   const [nombre, setNombre] = useState("");
   const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
 
   // Leer documentos de la colección "usuarios"
   const cargarUsuarios = async () => {
@@ -23,10 +24,11 @@ export default function FirestoreDemo() {
 
   // Añadir nuevo documento
   const agregarUsuario = async () => {
-    if (!nombre || !email) return;
-    await addDoc(collection(db, "usuarios"), { nombre, email });
+    if (!nombre || !email || !phone) return;
+    await addDoc(collection(db, "usuarios"), { nombre, email, phone });
     setNombre("");
     setEmail("");
+    setPhone("");
     cargarUsuarios(); // actualizar lista
   };
 
@@ -38,7 +40,7 @@ export default function FirestoreDemo() {
   return (
     <div style={{ maxWidth: 400, margin: "0 auto" }}>
       <h2>Firestore Demo</h2>
-
+        
       <input
         type="text"
         placeholder="Nuevo usuario"
@@ -52,13 +54,34 @@ export default function FirestoreDemo() {
         onChange={(e) => setEmail(e.target.value)}
       />
 
+      <input
+        type="text"
+        placeholder="Teléfono"
+        value={phone}
+        onChange={(e) => setPhone(e.target.value)}
+      />
+
       <button onClick={agregarUsuario}>Agregar</button>
 
-      <ul>
-        {usuarios.map((u) => (
-          <li key={u.id}>{u.nombre}</li>
-        ))}
-      </ul>
+    <h2>Lista de usuarios</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Email</th>
+            <th>Teléfono</th>
+            </tr>
+        </thead>
+        <tbody>
+          {usuarios.map((u) => (
+            <tr key={u.id}>
+              <td>{u.nombre}</td>
+              <td>{u.email}</td>
+              <td>{u.phone}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 }
