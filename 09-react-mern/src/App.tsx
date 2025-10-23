@@ -7,8 +7,7 @@ type Vehiculo = {
   marca: string;
   modelo: string;
   combustible: string;
-  itvVigente: boolean;
-  seguroVigente: boolean;
+  seguroEnVigor: boolean;
   fechaUltimaITV: string;
 };
 
@@ -31,9 +30,8 @@ export default function App() {
             <th> Matrícula</th>
             <th> Marca</th>
             <th> Modelo</th>
-            <th>🗓️ Fecha de matriculación</th>
+            <th>🗓️ Fecha última ITV</th>
             <th>🛡️ Seguro vigente</th>
-            <th>🔧 ITV vigente</th>
           </tr>
         </thead>
         <tbody>
@@ -45,8 +43,7 @@ export default function App() {
               {/* Convertir fecha a tipo Date() */}
               {/* Formatear fecha a "dia" de "mes" del "año" */}
               <td>{new Date(v.fechaUltimaITV).toLocaleDateString("es-ES", { day: "numeric", month: "long", year: "numeric" })}</td>
-              <td>{v.seguroVigente ? "✅" : "❌"}</td>
-              <td>{v.itvVigente ? "✅" : "❌"}</td>
+              <td>{v.seguroEnVigor ? "✅" : "❌"}</td>
             </tr>
           ))}
         </tbody>
