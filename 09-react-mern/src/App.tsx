@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "./App.css";
 
 type Vehiculo = {
   _id: string;
@@ -23,14 +24,33 @@ export default function App() {
 
   return (
     <div>
-      <h1>Listado de Vehículos DGT</h1>
-      <ul>
-        {vehiculos.map((v) => (
-          <li key={v._id}>
-            {v.marca} {v.modelo} ({v.matricula}) - Fecha matriculación: {v.fechaUltimaITV}
-          </li>
-        ))}
-      </ul>
+      <h1>Listado de Vehículos DGT 🚗</h1>
+      <table>
+        <thead>
+          <tr>
+            <th> Matrícula</th>
+            <th> Marca</th>
+            <th> Modelo</th>
+            <th>🗓️ Fecha de matriculación</th>
+            <th>🛡️ Seguro vigente</th>
+            <th>🔧 ITV vigente</th>
+          </tr>
+        </thead>
+        <tbody>
+          {vehiculos.map((v) => (
+            <tr key={v._id}>
+              <td>{v.matricula}</td>
+              <td>{v.marca}</td>
+              <td>{v.modelo}</td>
+              {/* Convertir fecha a tipo Date() */}
+              {/* Formatear fecha a "dia" de "mes" del "año" */}
+              <td>{new Date(v.fechaUltimaITV).toLocaleDateString("es-ES", { day: "numeric", month: "long", year: "numeric" })}</td>
+              <td>{v.seguroVigente ? "✅" : "❌"}</td>
+              <td>{v.itvVigente ? "✅" : "❌"}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 }
