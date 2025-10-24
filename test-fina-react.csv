@@ -1,0 +1,21 @@
+Pregunta,Opción 1,Opción 2,Opción 3,Opción 4,Respuesta Correcta
+¿Qué es React?,Un framework backend basado en Node.js,Una biblioteca JavaScript para construir interfaces de usuario,Un lenguaje de programación,Un sistema de bases de datos,Una biblioteca JavaScript para construir interfaces de usuario
+¿Qué hook se utiliza para gestionar el estado dentro de un componente funcional?,useEffect,useState,useMemo,useReducer,useState
+¿Qué hook se usa para ejecutar código al montar o actualizar un componente?,useState,useEffect,useCallback,useMemo,useEffect
+¿Qué prop debe recibir un componente hijo dentro de un <Route> de React Router para renderizarse?,view,path,element,route,element
+¿Qué archivo suele centralizar todas las rutas de una aplicación React moderna?,router.tsx,routes.json,AppRouter.js,index.html,router.tsx
+¿Para qué sirve un Context en React?,Para manejar efectos secundarios,Para almacenar y compartir estado global,Para optimizar componentes,Para renderizar listas,Para almacenar y compartir estado global
+¿Qué hook se utiliza para acceder a un Context dentro de un componente?,useContext,useState,useReducer,useRef,useContext
+En React Router v6, ¿cómo se redirige a otra página de forma programática?,redirect("/home"),window.location.href = "/home",useNavigate(),Link.push("/home"),useNavigate()
+¿Qué es una ruta protegida (Protected Route)?,Una ruta que solo se puede visitar con conexión a internet,Una ruta que requiere autenticación del usuario,Una ruta que no tiene acceso al servidor,Una ruta que está protegida con contraseña,Una ruta que requiere autenticación del usuario
+¿Qué diferencia principal hay entre Context y Redux Toolkit?,Redux Toolkit se usa solo para formularios,Context no puede manejar datos globales,Redux Toolkit ofrece una estructura más escalable y organizada,Context es más rápido en aplicaciones grandes,Redux Toolkit ofrece una estructura más escalable y organizada
+¿Qué función de Redux Toolkit se usa para definir un slice de estado?,createReducer(),createSlice(),makeStore(),defineState(),createSlice()
+¿Qué método HTTP se usa para crear un nuevo recurso en un CRUD?,GET,POST,PUT,DELETE,POST
+¿Qué método HTTP se usa para actualizar parcialmente un recurso existente?,PATCH,PUT,POST,GET,PATCH
+En Firebase, ¿qué diferencia hay entre Realtime Database y Firestore?,Firestore organiza los datos en colecciones y documentos,Realtime Database usa SQL,Firestore no permite relaciones,Realtime Database no sincroniza en tiempo real,Firestore organiza los datos en colecciones y documentos
+¿Qué hook de React se suele usar para manejar formularios controlados?,useForm,useState,useInput,useEffect,useState
+¿Qué método de Firebase Auth permite iniciar sesión con email y contraseña?,auth.loginUser(),signInWithEmailAndPassword(),connectAuth(),auth.login(),signInWithEmailAndPassword()
+En una app MERN, ¿qué representa cada letra?,MongoDB, Express, React, Node,MySQL, Electron, React, Next,MongoDB, Ember, Redux, Node,MySQL, Express, Redux, Nest,MongoDB, Express, React, Node
+En MongoDB con Mongoose, ¿qué comando se usa para insertar un nuevo documento?,insertOne(),create(),add(),saveAll(),create()
+¿Cuál de las siguientes opciones describe mejor el flujo de una app React conectada a un backend?,React → Firebase Storage → CSS,React (frontend) → API REST (Express/Node) → Base de datos (MongoDB/Firestore),React → HTML → MongoDB,React → GitHub → MongoDB,React (frontend) → API REST (Express/Node) → Base de datos (MongoDB/Firestore)
+¿Cuál de estas prácticas mejora la seguridad en una app React conectada a base de datos?,Guardar contraseñas en texto plano,Validar datos solo en el frontend,Proteger endpoints con autenticación y roles en el backend,Desactivar HTTPS en desarrollo,Proteger endpoints con autenticación y roles en el backend
