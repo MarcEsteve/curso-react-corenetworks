@@ -1,22 +1,34 @@
 import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
+import dotenv from "dotenv";
 import vehiculosRoutes from "./routes/vehiculos.js";
 
-const app = express();
+dotenv.config();
 
-// Middlewares
+const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Conexión a MongoDB local primero
-mongoose.connect("mongodb://localhost:27017/dgt_vehiculos")
-  .then(() => console.log("✅ Conectado a MongoDB local"))
-  .catch(err => console.error("❌ Error de conexión:", err));
+// Healthcheck sencillo
+app.get("/api/health", (_req, res) => res.json({ ok: true }));
 
-// Rutas
 app.use("/api/vehiculos", vehiculosRoutes);
 
-// Puerto
-const PORT = 4000;
-app.listen(PORT, () => console.log(`🚗 Servidor en http://localhost:${PORT}`));
+const PORT = process.env.PORT || 4000;
+const MONGODB_URI = process.env.MONGODB_URI; // Atlas
+
+async function start() {
+  try {
+    if (!MONGODB_URI) throw new Error("Falta MONGODB_URI en .env");
+    await mongoose.connect(MONGODB_URI);
+    console.log("✅ Conectado a MongoDB Atlas");
+    app.listen(PORT, () =>
+      console.log(`🚗 API en http://localhost:${PORT}`)
+    );
+  } catch (err) {
+    console.error("❌ Error conectando a MongoDB Atlas:", err.message);
+    process.exit(1);
+  }
+}
+start();

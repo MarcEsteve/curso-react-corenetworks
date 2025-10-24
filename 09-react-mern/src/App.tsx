@@ -43,7 +43,7 @@ export default function App() {
               {/* Convertir fecha a tipo Date() */}
               {/* Formatear fecha a "dia" de "mes" del "año" */}
               <td>{new Date(v.fechaUltimaITV).toLocaleDateString("es-ES", { day: "numeric", month: "long", year: "numeric" })}</td>
-              <td>{v.seguroEnVigor ? "✅" : "❌"}</td>
+              <td>{v.seguroEnVigor ? "✅ Seguro en vigor" : "❌ Seguro caducado"}</td>
             </tr>
           ))}
         </tbody>
