@@ -11,7 +11,7 @@ export default function FormularioSimple() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <h2>Formulario controlado</h2>
+      <h2>Formulario controlado "simple"</h2>
 
       <label>
         Nombre:

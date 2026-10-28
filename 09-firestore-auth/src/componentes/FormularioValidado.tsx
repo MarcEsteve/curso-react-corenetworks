@@ -46,7 +46,7 @@ export default function FormularioValidado() {
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          placeholder="mínimo 6 caracteres"
+          placeholder="mínimo 8 caracteres"
         />
       </label>
 

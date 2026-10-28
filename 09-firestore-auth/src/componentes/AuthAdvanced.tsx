@@ -12,7 +12,7 @@ function mapAuthError(code?: string) {
     case "auth/email-already-in-use": return "Este email ya está registrado.";
     case "auth/invalid-email": return "Formato de email inválido.";
     case "auth/weak-password": return "Contraseña demasiado débil (mín. 6).";
-    case "auth/user-not-found":
+    case "auth/user-not-found": return "Usuario no encontrado.";
     case "auth/wrong-password": return "Credenciales incorrectas.";
     default: return "Error de autenticación.";
   }

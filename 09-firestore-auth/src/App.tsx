@@ -1,10 +1,10 @@
 import './App.css'
-import AuthAdvanced from './componentes/AuthAdvanced'
-// import AuthSimple from './componentes/AuthSimple'
-// import FirestoreDemo from './componentes/FirestoreDemo'
-// import AuthDemo from './componentes/AuthDemo'
 // import FormularioSimple from './componentes/FormularioSimple'
 // import FormularioValidado from './componentes/FormularioValidado'
+// import AuthDemo from './componentes/AuthDemo'
+// import FirestoreDemo from './componentes/FirestoreDemo'
+// import AuthSimple from './componentes/AuthSimple'
+import AuthAdvanced from './componentes/AuthAdvanced'
 
 function App() {
 

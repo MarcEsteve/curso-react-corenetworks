@@ -1,54 +1,23 @@
-# React + TypeScript + Vite
+# Casos de uso de los componentes
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Los componentes de este proyecto muestran una progresión desde formularios básicos hasta la integración de Firebase Authentication y Cloud Firestore.
 
-Currently, two official plugins are available:
+1. **`FormularioSimple` — formulario controlado**
+   Practica el manejo del estado de un formulario en React. Guarda el nombre y el correo electrónico en el estado y, al enviarlo, muestra los datos en la consola. No valida los campos ni guarda la información en un servidor.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+2. **`FormularioValidado` — validación de datos**
+   Comprueba el formato del correo electrónico y que la contraseña tenga al menos ocho caracteres antes de aceptar el envío. Sirve para aprender a validar campos y mostrar errores; no crea una cuenta ni persiste los datos.
 
-## Expanding the ESLint configuration
+3. **`AuthDemo` — autenticación básica**
+   Integra Firebase Authentication para registrar usuarios e iniciar sesión con correo y contraseña. Muestra el usuario conectado o un mensaje de error.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+4. **`FirestoreDemo` — persistencia de datos**
+   Practica Cloud Firestore: lee documentos de la colección `usuarios`, permite añadir nuevos usuarios y presenta los resultados en una tabla. No autentica a los usuarios. Este componente y `AuthDemo` enseñan servicios distintos de Firebase, por lo que su orden de aprendizaje puede variar.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+5. **`AuthSimple` — autenticación y perfil**
+   Ofrece registro e inicio de sesión, valida el correo y la longitud mínima de la contraseña y, al registrar una cuenta, guarda un perfil básico en Firestore asociado al identificador del usuario de Firebase Authentication.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+6. **`AuthAdvanced` — flujo de autenticación más completo**
+   Añade nombre, confirmación de contraseña, validaciones adicionales y mensajes específicos para distintos errores de Firebase. Al registrar, también actualiza el perfil de Authentication y guarda más información del usuario en Firestore.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+En `src/App.tsx` se selecciona qué componente mostrar. Actualmente está activo `AuthSimple`; los demás componentes están comentados.
